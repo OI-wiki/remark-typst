@@ -1,0 +1,3 @@
+[submodule "escape-typst"]
+	path = escape-typst
+	url = https://github.com/megakite/escape-typst
