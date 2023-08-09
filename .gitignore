@@ -63,5 +63,5 @@ typings/
 test
 .remarkrc
 test.js
-
+*.pdf
 
