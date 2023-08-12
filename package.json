@@ -4,6 +4,7 @@
   "description": "A tool to compile mdast to Typst, remastered.",
   "main": "index.js",
   "dependencies": {
+    "mathjax": "^2.7.9",
     "remark-details": "^1.1.0",
     "remark-footnotes": "^1.0.0",
     "remark-math": "^1.0.5",
