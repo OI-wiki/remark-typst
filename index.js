@@ -1,9 +1,19 @@
 'use strict'
 
-const compiler = require('./lib/compiler')
+import toTypst from './lib/compiler.js'
 
-module.exports = typst
+export default remarkTypst
 
-function typst (options) {
-  this.Compiler = compiler(options || {})
+function remarkTypst(options) {
+  const self = this
+
+  self.Compiler = compiler
+
+  function compiler(doc) {
+    return toTypst(doc, {
+      ...self.data('settings'),
+      ...options,
+      extensions: self.data('toTypstExtensions') || [],
+    })
+  }
 }
