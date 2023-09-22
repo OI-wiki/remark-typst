@@ -8,7 +8,9 @@
     "sync-request": "^6.1.0",
     "to-vfile": "^8.0.0",
     "unified": "^10.1.0",
-    "unist-util-visit": "^4.1.0"
+    "unist-util-visit": "^4.1.0",
+    "remark-mathjax": "file:./remark-mathjax",
+    "escape-typst": "file:./escape-typst"
   },
   "scripts": {
     "test": "node test.js"
