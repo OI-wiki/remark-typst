@@ -15,14 +15,14 @@ git clone --recurse-submodules --remote-submodules https://github.com/OI-wiki/re
 按如下方法使用：
 
 ```js
-const unified = require('unified')
-const parse = require('remark-parse')
-const typst = require('remark-typst')
-const vfile = require('to-vfile')
+import { unified } from 'unified'
+import remarkParse from 'remark-parse'
+import remarkTypst from 'remark-typst'
+import vfile from 'to-vfile'
 
 unified()
-	.use(parse) // 调用 remark 解析引擎
-	.use(typst, { // 编译到 Typst
+	.use(remarkParse) // 调用 remark 解析引擎
+	.use(remarkTypst, { // 编译到 Typst
 		prefix: filename.replace(prefixRegEx, "").replace(/md$/, ""), // 文件名（不含 md 后缀）
 		depth: depth, // 指定 <h1> 对应标题深度（0, 1, 2 分别表示一、二、三级标题），用于全书的结构组织
 		current: filename, // 文件名（含 md 后缀）
